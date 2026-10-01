@@ -276,6 +276,9 @@ The campaign is described in *Proving at Scale for Universal Algebra*, The 6th
 Workshop on Mathematical Reasoning and AI (MATH-AI), NeurIPS 2026. A citable
 archive of this repository will receive a DOI.
 
+The repository is created and curated by
+[@nasqret](https://github.com/nasqret).
+
 ## References
 
 - E. W. H. Lee and W. T. Zhang, Finite basis problem for semigroups of order
@@ -296,5 +299,10 @@ archive of this repository will receive a DOI.
 
 ## Licence
 
-GNU General Public License, version 3; see `LICENSE`. The multiplication tables
-are derived from Smallsemi, which is GPL-3.0-or-later; see `NOTICE.md`.
+This repository is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version (SPDX: `GPL-3.0-or-later`). It is distributed in the hope that it
+will be useful, but without any warranty; see the full text in `LICENSE`. The
+multiplication tables are derived from GAP Smallsemi, which is distributed
+under the same licence; see `NOTICE.md`.
