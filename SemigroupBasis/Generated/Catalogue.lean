@@ -1,0 +1,14 @@
+import SemigroupBasis.Generated.CatalogueOrder1
+import SemigroupBasis.Generated.CatalogueOrder2
+import SemigroupBasis.Generated.CatalogueOrder3
+import SemigroupBasis.Generated.CatalogueOrder4
+import SemigroupBasis.Generated.CatalogueOrder5Part01
+import SemigroupBasis.Generated.CatalogueOrder5Part02
+import SemigroupBasis.Generated.CatalogueOrder5Part03
+import SemigroupBasis.Generated.CatalogueOrder5Part04
+import SemigroupBasis.Generated.CatalogueOrder5Part05
+import SemigroupBasis.Generated.CatalogueOrder5Part06
+import SemigroupBasis.Generated.CatalogueOrder5Part07
+import SemigroupBasis.Generated.CatalogueOrder5Part08
+import SemigroupBasis.Generated.CatalogueOrder5Part09
+import SemigroupBasis.Generated.CatalogueOrder5Part10

@@ -1,0 +1,11 @@
+import SemigroupBasis.Generated.Order6FactorPairS2S5348Targets
+
+namespace SemigroupBasis.Order6ResidualReleaseV3.OverlookedExisting63.S6_4265
+
+def representative_basis :=
+  SemigroupBasis.Generated.Order6FactorPairS2S5348Targets.S6_4265.representative_basis
+
+def opposite_basis :=
+  SemigroupBasis.Generated.Order6FactorPairS2S5348Targets.S6_4265.opposite_basis
+
+end SemigroupBasis.Order6ResidualReleaseV3.OverlookedExisting63.S6_4265

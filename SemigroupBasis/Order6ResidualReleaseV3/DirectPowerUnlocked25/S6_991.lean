@@ -1,0 +1,11 @@
+import SemigroupBasis.Generated.Order6DirectPowerUnlockedV3.S6_989_A522865606eb4_Part01
+
+namespace SemigroupBasis.Order6ResidualReleaseV3.DirectPowerUnlocked25.S6_991
+
+theorem representative_basis : SemigroupBasis.BasisFor SemigroupBasis.Generated.Order6DirectPowerUnlockedV3.S6_989_A522865606eb4_Part01.S6_991.table.semigroup (SemigroupBasis.Generated.Order6DirectPowerUnlockedV3Sources.S6_989.representativeBasis) :=
+  SemigroupBasis.Generated.Order6DirectPowerUnlockedV3.S6_989_A522865606eb4_Part01.S6_991.representative_basis
+
+theorem opposite_basis : SemigroupBasis.BasisFor SemigroupBasis.Generated.Order6DirectPowerUnlockedV3.S6_989_A522865606eb4_Part01.S6_991.table.semigroup.opposite (SemigroupBasis.reversedBasis (SemigroupBasis.Generated.Order6DirectPowerUnlockedV3Sources.S6_989.representativeBasis)) :=
+  SemigroupBasis.Generated.Order6DirectPowerUnlockedV3.S6_989_A522865606eb4_Part01.S6_991.opposite_basis
+
+end SemigroupBasis.Order6ResidualReleaseV3.DirectPowerUnlocked25.S6_991

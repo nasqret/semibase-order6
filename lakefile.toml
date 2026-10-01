@@ -1,0 +1,23 @@
+name = "semibase-order6"
+version = "1.0.0"
+defaultTargets = ["SemiBase"]
+# `-j1`: one elaboration thread per Lean process (Lake already compiles files in
+# parallel). `--tstack`: a 2 GB thread stack for the deep `rfl` proofs of the
+# generated adapter modules. Both are weak arguments, so they do not enter
+# Lake's trace hashes.
+weakLeanArgs = ["-j1", "--tstack=2097152"]
+
+# The statement of the classification and its proof from the endpoints.
+[[lean_lib]]
+name = "SemiBase"
+
+# The proof development: one endpoint theorem per class and the library the
+# endpoints are built on.
+[[lean_lib]]
+name = "SemigroupBasis"
+
+[[lean_lib]]
+name = "Order6FinalL5TransferV3"
+
+[[lean_lib]]
+name = "research"

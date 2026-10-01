@@ -1,0 +1,101 @@
+import Order6FinalL5TransferV3.Part028
+import SemigroupBasis.Opposite
+
+namespace SemigroupBasis.Generated.Order6DirectPowerAvailableV3Sources.S6_1230
+
+open SemigroupBasis
+
+abbrev sourceSemigroup := SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.table.semigroup
+
+def sourceLaw0 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw0
+
+def sourceLaw1 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw1
+
+def sourceLaw2 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw2
+
+def sourceLaw3 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw3
+
+def sourceLaw4 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw4
+
+def sourceLaw5 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw5
+
+def sourceLaw6 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw6
+
+def sourceLaw7 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw7
+
+def sourceLaw8 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw8
+
+def sourceLaw9 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw9
+
+def sourceLaw10 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw10
+
+def sourceLaw11 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw11
+
+def sourceLaw12 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw12
+
+def sourceLaw13 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw13
+
+def sourceLaw14 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw14
+
+def sourceLaw15 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw15
+
+def sourceLaw16 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw16
+
+def sourceLaw17 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw17
+
+def sourceLaw18 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw18
+
+def sourceLaw19 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw19
+
+def sourceLaw20 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw20
+
+def sourceLaw21 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw21
+
+def sourceLaw22 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw22
+
+def sourceLaw23 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw23
+
+def sourceLaw24 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw24
+
+def sourceLaw25 : Identity Nat :=
+  SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetLaw25
+
+def sourceBasis : List (Identity Nat) :=
+  [sourceLaw0, sourceLaw1, sourceLaw2, sourceLaw3, sourceLaw4, sourceLaw5, sourceLaw6, sourceLaw7, sourceLaw8, sourceLaw9, sourceLaw10, sourceLaw11, sourceLaw12, sourceLaw13, sourceLaw14, sourceLaw15, sourceLaw16, sourceLaw17, sourceLaw18, sourceLaw19, sourceLaw20, sourceLaw21, sourceLaw22, sourceLaw23, sourceLaw24, sourceLaw25]
+
+theorem sourceBasis_eq_upstream :
+    sourceBasis = (SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.targetBasis) := by
+  rfl
+
+theorem basis_complete : BasisFor sourceSemigroup sourceBasis := by
+  rw [sourceBasis_eq_upstream]
+  exact SemigroupBasis.Generated.Order6FinalL5TransferV3.S6_1230.representative_basis
+
+end SemigroupBasis.Generated.Order6DirectPowerAvailableV3Sources.S6_1230
+
+#print axioms SemigroupBasis.Generated.Order6DirectPowerAvailableV3Sources.S6_1230.basis_complete

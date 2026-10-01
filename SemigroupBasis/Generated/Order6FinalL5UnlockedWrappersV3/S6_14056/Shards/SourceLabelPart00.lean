@@ -1,0 +1,29 @@
+import SemigroupBasis.RightGeneratedPowerCertificate
+
+set_option maxRecDepth 8192
+
+namespace SemigroupBasis.Generated.Order6FinalL5UnlockedWrappersV3.S6_14056.Shards
+
+def packedSourceLabelBlockCodeChunk0 (index : Nat) : Nat :=
+  match index with
+  | 0 => 408459473570844765277795462983414
+  | 1 => 0
+  | 2 => 50672229330378622164929843529321235638265388728320
+  | 3 => 4021774284069273600
+  | 4 => 0
+  | 5 => 0
+  | 6 => 0
+  | 7 => 50672229330378622164929829557449509287854478131200
+  | 8 => 48372940
+  | 9 => 0
+  | 10 => 0
+  | 11 => 0
+  | 12 => 50672228492352593689462451482642371534580340490240
+  | 13 => 646625021971811248514511680365229034700
+  | 14 => 0
+  | 15 => 0
+  | 16 => 50672229330378622164632774123252981864187417329664
+  | 17 => 50671143248645717959207844607398980963386821444620
+  | _ => 0
+
+end SemigroupBasis.Generated.Order6FinalL5UnlockedWrappersV3.S6_14056.Shards

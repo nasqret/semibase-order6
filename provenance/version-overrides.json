@@ -1,0 +1,366 @@
+[
+ {
+  "path": "SemigroupBasis/CoRoots/Order6FactorPairS2S5353Normal.lean",
+  "new_blob": "106d345d9ef48600f61d4cf2b46dd01a354453a1",
+  "reason": "S2 branch version (91b0db1d8/d942dc0c5/359cd9294): makes private theorem derivesEndpointWordsSameInitial public (+doc); required by CoRoots/Order6Day7/S2_4/SeedS5_245 (S2 delivery); public-declaration superset of live d13ce205; no other module declares that name",
+  "expected_by": [
+   "SemigroupBasis/CoRoots/Order6Day7/S2_4/SeedS5_245.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/Examples/LeftRegularBandThree.lean",
+  "new_blob": "31e0feab08a4c67b095fe9cc7feb7add24cd63d6",
+  "reason": "receipt-head 20d7b9e1e version (L1R rank-1 receipts): live c4b143f1 + theorem firstOccurrenceSequence_eq_of_valid (50 lines, pure addition); required by CoRoots/Order6L1RRank1/G43fb00e0b3bdd469/Semantics and Gca80a5da838636f5/FrozenHeadStratifiedCompleteness; no other module declares that name",
+  "expected_by": [
+   "SemigroupBasis/CoRoots/Order6L1RRank1/G43fb00e0b3bdd469/Semantics.lean",
+   "SemigroupBasis/CoRoots/Order6L1RRank1/Gca80a5da838636f5/FrozenHeadStratifiedCompleteness.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/Examples/EdmundsFourSixtyFour.lean",
+  "new_blob": "60ca37d2cd4dbb7cd834db8f20ffc1edcbcc0698",
+  "reason": "receipt-head 20d7b9e1e version: private theorem edmundsFourSixtyFourNormalWord_eq_of_eval_eq made public (1 line); required by CoRoots/Order6L1RRank1/G43fb00e0b3bdd469/Semantics; superset of live 3d888a78; no other module declares that name",
+  "expected_by": [
+   "SemigroupBasis/CoRoots/Order6L1RRank1/G43fb00e0b3bdd469/Semantics.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/CoRoots/Order6L3HeavyRank2/LayerCS3_11S5_788NormalForm.lean",
+  "new_blob": "17148d8d2870ba8b1873918eab7a661d4874bda3",
+  "reason": "receipt-head ccfc8f09b version instead of the S2-branch version c0b6fd4d: its only dependent CoRoots/Order6L3HeavyRank2/LayerCS3_11S5_788AnchoredGaps (receipt closure) was sealed against it; not a live-head file",
+  "expected_by": [
+   "SemigroupBasis/CoRoots/Order6L3HeavyRank2/LayerCS3_11S5_788AnchoredGaps.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/Examples/CyclicThreeTwo.lean",
+  "new_blob": "9857f2374:SemigroupBasis/Examples/CyclicThreeTwo.lean",
+  "reason": "version at commit 9857f2374 (2026-08-16 'root10 + hash898207: export cyclicThreeTwoValid_class ... per codex-0 exact prescriptions'): live 51384eda + theorem cyclicThreeTwoValid_class (101 lines, pure addition); the LIVE-HEAD module CoRoots/Order6L3RootS3_15S4_12/Completeness.lean references it (dangling reference at the live head); no other module declares that name",
+  "expected_by": [
+   "SemigroupBasis/CoRoots/Order6L3RootS3_15S4_12/Completeness.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/Examples/FirstOccurrenceFour.lean",
+  "new_blob": "8977bf54184c2e98b4369cbb08313b1cd92bc45e",
+  "reason": "PATCH (not a historical version): the live file 62c036d0 (sha256 c3fc5d55fa8f3853...) declares `private theorem firstOccurrenceSequence_eq_self_of_nodup` (explicit arguments) which clashes with the public lemma of the same name exported by Examples/LeftRegularBandThree since 2026-08-06; only the PRIVATE declaration name changed to firstOccurrenceSequence_eq_self_of_nodup_explicit at lines 674 and 702 (2 lines); no statement, proof term or public name changed; compiles against the live LeftRegularBandThree (checked with lake env lean); unblocks Generated/S4_59 and 788 classes",
+  "expected_by": [
+   "SemigroupBasis/Generated/S4_59.lean"
+  ]
+ },
+ {
+  "path": "SemigroupBasis/Examples/FirstLetterThreeNilpotentFour.lean",
+  "new_blob": "88766a7d865902aff0470ccb22fee8e1303a4dff",
+  "reason": "version at 7ee930ff9 (2026-08-17, r2 export): adds public theorem firstLetterThreeNilpotentValid_class (+118 lines, 0 deletions vs live f55848e59466); required by CoRoots/Order6L3RootS3_15S4_12/Variants.lean (receipt closure) imported by Generated/Order6L3RootS3_15S4_12Targets; no other module declares any of the added names (checked 2026-09-06 03:50 by fable); pure superset of the live head"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_10983.lean",
+  "new_blob": "016166129e44d37dea29998a0f63eff774f0a237",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 02da8d608faa; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_10984.lean",
+  "new_blob": "7bd49f99191cea6880db87d8ddef93703983a6cf",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob ab0ced766926; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_11230.lean",
+  "new_blob": "b3e82c7e65bf342ac4ac5cb6e3acca0a0a0caa70",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 1945407e9af6; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_11521.lean",
+  "new_blob": "93bbb59f9418acb2d8b177f1490c58cdfb013c4c",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob d0adcdbdbb82; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_1238.lean",
+  "new_blob": "e4fc2123a08b5b0f0541df3c5f532fd4b0c7b1e6",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob e44c1a998cbc; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_12776.lean",
+  "new_blob": "12f0feef311f731a4b0c72063e66b41990c77e17",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob fe6a2204636a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_12967.lean",
+  "new_blob": "d89a8d754fbbbe7b08212e6c8149613b675a6f37",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 03b8e7716dfb; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_13357.lean",
+  "new_blob": "d24282e53a705dc8c34d386db4ec450950c12e48",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 711589a4ca6a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_13359.lean",
+  "new_blob": "25f1f791aa30d8a58ddd7ecf7eed242e20cbabaa",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 661634707925; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_13386.lean",
+  "new_blob": "31ccdba03995e003d0905f325a9aad859bb35691",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 69f8c6ab5765; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_1349.lean",
+  "new_blob": "b0b51f04c12ff196639f6242e78da7a6bb1e6eb0",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 9289639310ee; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_1351.lean",
+  "new_blob": "10654ea13c0455f8950157adb2057b84e0d0e1f8",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 88d82c50a7b6; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_13668.lean",
+  "new_blob": "a26ab27620fbead115dcf272415595f68b1d460b",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 4bc7210c917a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_13736.lean",
+  "new_blob": "1aa78b3829fad054eb2fed01021bb2e3a454dc52",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob bb176ca9a53a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_14152.lean",
+  "new_blob": "6b75311a4692db76e2d6621a40e6cd9b5c1c2728",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 4be36f4daa9b; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_14262.lean",
+  "new_blob": "d68e23457ceaf0f9d9821ad08187acb3dbb2ad24",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 724433922434; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_2750.lean",
+  "new_blob": "81f2f7701e232b8f5228fa3db73f3e58a1736130",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob f6566020254b; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_2764.lean",
+  "new_blob": "3a76c2d0458efe4d048bbb0a34533e6d15431775",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob d05d194ff4fe; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_2960.lean",
+  "new_blob": "33859626f102ed623b0ef1c6835768725a159b70",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 99221862baff; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_2962.lean",
+  "new_blob": "b7fd0ba337400d0bd534f69f387c4b006a2c546f",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 231786d25e07; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_3032.lean",
+  "new_blob": "dabccebf97b0500f0d40632e6c0fce80c3b0f2f8",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob aab27a7bde3f; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_3371.lean",
+  "new_blob": "c011876b3e6af21c5c79b111bb98ac270b8704a7",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob aee78e42cd7b; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_3372.lean",
+  "new_blob": "d96f38ddd0f064e23946aaa3ad595bcac50c224e",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob b84c57306400; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_3377.lean",
+  "new_blob": "eb356ca98b00c89bb37c8d22667719813f3c809d",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 3277aa21c00c; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4076.lean",
+  "new_blob": "7b0af9d39c6117738bc43509f26817d095ddf7fd",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 62bb158f0102; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4079.lean",
+  "new_blob": "23aed8c03e49a9a074a3b93dca58f287e3623b57",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 915f707131c1; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4089.lean",
+  "new_blob": "865c90320303e41b8014d05120de0ce860c7bacd",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob e51631dd11f5; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4164.lean",
+  "new_blob": "7f28131d6ac3c531d3993c6ca8228b3e3b31cfd2",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob e79998f8b1b6; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4185.lean",
+  "new_blob": "916e771894d70b60d7683371531c7ab62b03e29a",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 65602ea5dac1; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4187.lean",
+  "new_blob": "b5406b7bfa75339bbb7b07bdd8f37271d45f4de6",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 68c82399d33d; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4199.lean",
+  "new_blob": "5676402de6120b21aa8ef4ba8c1859e7918e2ee7",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob f71d9d03261b; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4286.lean",
+  "new_blob": "a89d95618b03c76aee3b60e7ed09696f20df00ed",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 630a65068b4d; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4288.lean",
+  "new_blob": "dcfa42b29b711203d88d75a717dcbd98ded91ac6",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob d45b613572ab; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_4295.lean",
+  "new_blob": "657a87b36669b29f7f9cf9da24bf6e760844c490",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob b5c7d86a2940; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5228.lean",
+  "new_blob": "2e101088651d3ea36f90481b9e7818378643ae3a",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob a6b99b89ccce; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5248.lean",
+  "new_blob": "290b040c78891361f72ec5e2520d73874709077e",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob fb15ece1edd6; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5525.lean",
+  "new_blob": "301ef8ea9965f1cb7fd950a597b7cb4b9d4e9a7e",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob d30f8f2af964; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5613.lean",
+  "new_blob": "3bb8ce36cd0f83a9557100d82248f73cc92d6b5a",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 19ca8f4b12fa; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5621.lean",
+  "new_blob": "eba92a5930b479864f6a5a63f3ce7ebcfd16671b",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 2bdef2767dbb; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5659.lean",
+  "new_blob": "beb2c61fa25ef81662fd1470bfbe838949821425",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 46c40c5435ed; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_5668.lean",
+  "new_blob": "f44e50b7d667ba61b4bdb47bbbcd7578ba440c04",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob d10ab153b118; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6369.lean",
+  "new_blob": "0cd21bc3c4461d9ae78a4aa81d04eea18bc9f9bc",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob ebaf5cd5f820; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6385.lean",
+  "new_blob": "8ada5d7df0c5f772bb00ed714f2224aaf71eb350",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 61a4bdddb699; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6462.lean",
+  "new_blob": "80842f61d46213b7ec8de714744292b5ca81c61d",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob fe5cd76d9b1e; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6471.lean",
+  "new_blob": "2531b89cdb59572f52e203700c80a71fa27dbb1c",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 4349aee3b565; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6550.lean",
+  "new_blob": "1bdc8aa6166ed2b2ba0cb135113095978f7e8866",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob df8e76ab32c7; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6806.lean",
+  "new_blob": "aee351fcc4c943e58dfceab451b4161a868884a0",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 6b27b3fbaaf4; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_6950.lean",
+  "new_blob": "70db3d2f40082089b3f3548aff471959c71598e7",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 18adcad43405; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_7001.lean",
+  "new_blob": "740c97b35e0dc62ad0993792cc0ab70e1285ebd8",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 3194b4d22229; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_8222.lean",
+  "new_blob": "7f8ccd37adef6eb049762abc6331c83f762c7d3d",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob b4b82bb9ff80; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_8223.lean",
+  "new_blob": "16fb9c9daa78b7559680ce8f47979ae005a85a93",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob ad07d85fa50a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_8227.lean",
+  "new_blob": "de336e6baa823ddcaa6c7f4d651d188f96e1655a",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 605e4c2306eb; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_8228.lean",
+  "new_blob": "0453e0c32dfbe2aea1ee8c351fb2bfa86025fac2",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 8ae007fcb2b3; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_8873.lean",
+  "new_blob": "a8dc6bf49b3136577546d73bd73426eebf85fded",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 03464720cfc9; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9017.lean",
+  "new_blob": "0614edbbfda1079eeb62bc409d3379cd9779da24",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 63b3b458a936; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9307.lean",
+  "new_blob": "92aefaabbfe598e8abc1fe34e6cf45f28dc2bc83",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 87b385b336e0; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9319.lean",
+  "new_blob": "aabda979054185a9b805355919a67ebe776e4283",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob bead7c1ef27b; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9450.lean",
+  "new_blob": "a9187916c147aaa5581e63cbc19b051aead7a629",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob 5c8131941f8a; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9466.lean",
+  "new_blob": "350829f7e169173523107b37e163314e185e5178",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob be254ae92629; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "SemigroupBasis/Order6ResidualReleaseV3/OverlookedExisting60/S6_9915.lean",
+  "new_blob": "e6d615aa954a119bfd0f2198efb62370c61708b9",
+  "reason": "release wrapper: theorem NAME : _ := term has a type hole that Lean 4.28 rejects; rewritten to def NAME := term (same term, type inferred; kernel-checked; #print axioms unchanged); live blob a91c93403b69; verified to compile with lake env lean on S6_10983 (2026-09-06 07:55, fable)"
+ },
+ {
+  "path": "lakefile.toml",
+  "new_blob": "a4cb9037f45cad96b3ed337126eaee280081c76d",
+  "reason": "adds --tstack=2097152 to weakLeanArgs (thread stack 2 GB; weak args are excluded from Lake trace hashes so no module is invalidated); needed by Generated/Order6RouteLocalRootAdapters whose two rfl proofs over a 3513-law list overflow the default thread stack (Stack overflow detected in run 3b, job 232417); live blob 89e05f03e525; no proof content touched"
+ },
+ {
+  "path": "SemigroupBasis/Generated/Order6RouteLocalRootAdapters.lean",
+  "new_blob": "f6c47acac17e853b82eea3cbf4d326ad174b4fe6",
+  "reason": "final audit (live blob 7fc8cc69a8c6): (1) set_option maxRecDepth 8192 after the imports; (2) in the 4 blocks S6_2808/2810/2814/5269 the stale literal targetBasis is defined as the native family basis it restates; (3) in the 11 blocks S6_8924/9065/9937/10837/10842/11385/11392/11396/11459/11552/11598 the stale targetBasis_eq_native lemmas are removed and representative_basis/opposite_basis become aliases (def := <native declaration>) whose statements are the native ones; other 205 blocks byte-identical; whole module compile-checked with lake env lean --tstack=2097152: 0 errors (2026-09-06 08:50, fable)"
+ }
+]

@@ -1,0 +1,3 @@
+import SemigroupBasis.CoRoots.Order6SporadicSection12RepresentativeCheckS6_5597
+import SemigroupBasis.CoRoots.Order6SporadicSection12RepresentativeCheckS6_5625
+import SemigroupBasis.CoRoots.Order6SporadicSection12RepresentativeCheckS6_5626
