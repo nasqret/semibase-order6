@@ -115,10 +115,15 @@ links connect them to the semigroups of order six, and each can be checked.
    generator has to be trusted: a proof about any other table does not
    typecheck.
 
-The four nonfinitely based classes are also tied to the literature: their
+The four nonfinitely based classes are also tied to the literature. Their
 proofs work with the tables in the element order of the published sources and
 prove in Lean that these are the catalogue tables, through an explicit
-relabelling of the elements where the two orders differ (`B₂¹` and `A₂ᵍ`).
+relabelling of the elements where the two orders differ (`B₂¹` and `A₂ᵍ`). And
+`research/order6/published_classification.json` records Lee and Zhang's
+classification over the same catalogue: `scripts/check_catalogue.py` checks
+that its four exceptional classes are exactly `nonfinitelyBasedIds` of the
+statement, and that each published table is the catalogue table under the
+recorded relabelling.
 
 ## Verifying
 
@@ -132,12 +137,16 @@ cd semibase-order6
 ./scripts/verify.sh
 ```
 
-`scripts/verify.sh` does three things:
+`scripts/verify.sh` does five things:
 
 1. checks every Lean file of the development against the certified commit of
    the campaign (`scripts/check_provenance.py`);
-2. builds everything from source with `lake build`;
-3. prints the axioms of the main theorems and fails unless they are among
+2. checks the catalogue data against `catalogue.json` and the published
+   classification (`scripts/check_catalogue.py`);
+3. checks that every Lean file is imported by `SemiBase.lean`
+   (`scripts/check_closure.py`);
+4. builds everything from source with `lake build`;
+5. prints the axioms of the main theorems and fails unless they are among
    `propext`, `Classical.choice` and `Quot.sound` (so no `sorry` and no
    `native_decide`).
 
@@ -155,27 +164,103 @@ LEAN_NUM_THREADS=4 ./scripts/verify.sh
 The independent re-certification rebuilt the same files from a fresh clone in
 about two hours with 96 parallel jobs.
 
-## Repository layout
+## Repository map
 
-| Path | Files | Lines | Content |
-|---|---:|---:|---|
-| `SemiBase/Statement.lean` | 1 | 177 | The statement for one class, and the lemmas that connect it to the endpoints |
-| `SemiBase/Catalogue/` | 108 | 51,785 | The 15,973 tables, as data |
-| `SemiBase/Census/` | 107 | 100,557 | One theorem `Classified` per class, from its endpoint |
-| `SemiBase/Classification.lean` | 1 | 249 | The classification theorem |
-| `SemigroupBasis/*.lean` | 54 | 14,515 | Core library: words, identities, derivations, bases, finite tables, transfer lemmas |
-| `SemigroupBasis/CoRoots/` | 2,310 | 738,334 | Family proofs: one basis and one completeness proof for a family of semigroups |
-| `SemigroupBasis/Examples/` | 122 | 71,592 | Named families, and three of the four nonfinite-basis proofs |
-| `SemigroupBasis/Nonfinite/` | 19 | 26,328 | Nonfinite-basis arguments |
-| `SemigroupBasis/Generated/` | 4,171 | 3,730,859 | Generated proofs: transfers from semigroups solved earlier, nilpotent certificates |
-| `Order6FinalL5TransferV3/` | 360 | 747,286 | Generated transfer proofs |
-| `research/` | 73 | 363,880 | Generated transfer proofs of an earlier extension stage |
-| `SemigroupBasis/` (other) | 70 | 7,734 | Subdirect decompositions and other shared material |
-| `provenance/` | | | The audit certificate and how this tree was derived from it |
-| `scripts/` | | | Verification, provenance check, and the generator of `SemiBase/` |
+Every Lean file in this repository is needed. The repository holds exactly the
+files that `SemiBase.lean`, the root of the classification theorem, imports
+directly or indirectly; `scripts/check_closure.py` checks this, and
+`scripts/check_closure.py --table` recomputes the numbers below.
 
-The directory and module names are those of the campaign repository and record
-how the campaign proceeded rather than a mathematical taxonomy.
+```text
+SemiBase.lean                   root: imports the statement layer
+SemiBase/                       the statement and its proof from the endpoints (written for this repository)
+├── Statement.lean              what is claimed for one class: Entry, HasTable, Classified
+├── Catalogue/Order6/           the 15,973 Smallsemi tables, as Lean data
+├── Census/                     one theorem per class, from the endpoint of that class
+└── Classification.lean         the classification theorem and its two halves
+SemigroupBasis/                 the proof development of the campaign
+├── *.lean                      core library: words, identities, derivations, BasisFor,
+│                               finite tables, transfer lemmas
+├── Examples/                   named families of small order; three nonfinite-basis proofs
+├── Nonfinite/                  nonfinite-basis arguments; with Examples/, the four proofs
+├── CoRoots/                    family proofs: one basis, proved complete once for a family
+│   ├── S4_*, S5_*              families of orders 4 and 5, sources of transfers
+│   └── Order6*                 families of order 6
+├── Generated/                  machine-generated proofs
+│   ├── Catalogue*              the tables of orders 1 to 5
+│   ├── S2_* … S5_*, …          bases and proofs for orders 1 to 5, sources of transfers
+│   ├── Order6Nilpotent/        certificates for nilpotent semigroups of order 6
+│   ├── Order6Final*            the heaviest transfers of order 6
+│   └── Order6*                 the other generated proofs of order 6
+├── Order6Subdirect/            subdirect decompositions of order-6 semigroups
+├── Order6/                     shared order-6 helpers
+├── Normalization/              word normal forms
+├── Order6ResidualReleaseV3/    thin wrappers that restate endpoints
+└── Order7/                     one inflation lemma, used by four order-6 transfer files
+Order6FinalL5TransferV3/        transfers from orders at most 5: the final sweep
+research/formalization/         transfers from orders at most 5: earlier waves
+research/order6/                the catalogue and the published classification (data)
+gap/                            the GAP export of the catalogue
+scripts/                        the checks and the generator of SemiBase/
+provenance/                     the audit certificate and how this tree was derived
+```
+
+In the table, *needed by* counts the classes whose own proof (the endpoint
+theorem and everything it imports) uses a file of the folder, and *endpoints*
+counts the classes whose endpoint theorem lies in the folder; each class has
+exactly one endpoint, so that column adds up to 15,973. The statement layer is
+needed by every class.
+
+| Folder | Files | Lines | Needed by | Endpoints | Used by the 4 nonfinite proofs |
+|---|---:|---:|---:|---:|:---:|
+| `SemiBase/` and `SemiBase.lean` | 218 | 152,771 | all | – | yes |
+| `SemigroupBasis/*.lean` (core library) | 54 | 14,515 | 15,973 | 0 | yes |
+| `SemigroupBasis/Examples/` | 122 | 71,592 | 15,864 | 3 | yes |
+| `SemigroupBasis/Nonfinite/` | 19 | 26,328 | 4,840 | 1 | yes |
+| `SemigroupBasis/CoRoots/S4_*`, `S5_*` | 419 | 166,820 | 7,017 | 5 | – |
+| `SemigroupBasis/CoRoots/Order6*` | 1,891 | 571,514 | 1,203 | 478 | – |
+| `SemigroupBasis/Generated/Catalogue*` | 15 | 15,792 | 15,012 | 0 | – |
+| `SemigroupBasis/Generated/` (orders 1 to 5) | 138 | 114,565 | 15,564 | 0 | – |
+| `SemigroupBasis/Generated/Order6Nilpotent/` | 158 | 396,964 | 129 | 26 | – |
+| `SemigroupBasis/Generated/Order6Final*` | 2,988 | 2,410,530 | 63 | 63 | – |
+| `SemigroupBasis/Generated/Order6*` (other) | 872 | 793,008 | 5,785 | 5,675 | – |
+| `SemigroupBasis/Order6Subdirect/` | 21 | 3,075 | 379 | 0 | – |
+| `SemigroupBasis/Order6/` | 13 | 2,923 | 438 | 12 | – |
+| `SemigroupBasis/Normalization/` | 7 | 1,380 | 101 | 0 | – |
+| `SemigroupBasis/Order6ResidualReleaseV3/` | 28 | 308 | 33 | 25 | – |
+| `SemigroupBasis/Order7/` | 1 | 48 | 4 | 0 | – |
+| `Order6FinalL5TransferV3/` | 360 | 747,286 | 6,183 | 5,519 | – |
+| `research/formalization/` | 73 | 363,880 | 4,178 | 4,166 | – |
+
+Two things stand out. The core library and the lower orders (orders 1 to 5,
+tables and bases) are used by almost every class: most classes of order six are
+proved by transfer from a smaller semigroup. And the size is concentrated in a
+few classes: `SemigroupBasis/Generated/Order6Final*` holds 2.4 million lines,
+42% of all Lean code, for the endpoints of 63 classes, among them the largest
+proof, that of `[6, 12824]`.
+
+### Reading the names
+
+The names are those of the campaign and record how and when a proof was made,
+not what it proves. The ones that occur most often:
+
+| Name | Meaning |
+|---|---|
+| endpoint | the theorem that settles one class: `BasisFor T.semigroup B`, or its opposite, or `NonfinitelyBased T.semigroup`; `provenance/final-census-map.json` lists them |
+| `CoRoots` | family proofs: a basis proved complete once for a family of semigroups that share it |
+| `Generated` | proofs written by programs, not by hand: transfers, certificates, adapters |
+| `L5` | the campaign's results for orders at most 5 (1,309 classes), used as sources of transfers |
+| `Order6FinalL5TransferV3` | order 6, the final sweep of transfers from `L5`, third version of the generated output: a semigroup of order at most 5 with a certified basis embeds in the target, the target satisfies that basis, so the basis carries over |
+| `…_l5_extension_v1` to `v3` (in `research/`) | earlier waves of the same transfers |
+| `Order6FinalL5Unlocked…` | transfers of the final sweep that needed much heavier generated proofs, among them `[6, 12824]` |
+| `EmbeddingTransfers`, `DivisorTransfers`, `DirectPower`, `FactorPair`, `FactorIntersection`, `ExactInflation` | the transfer used: an embedding, a quotient of a subsemigroup, an embedding into a direct power, a subdirect product of two factors, an inflation |
+| `Order6Nilpotent/Certificates/CutoffN` | nilpotent semigroups whose products of `N` elements vanish: the basis lists the identities between short words |
+| `Order6SporadicSection…` | the sporadic classes treated in the numbered sections of Lee and Zhang (2015); section 19 is `[6, 3842]` |
+| `Order6LeeZhang…`, `Order6LeeLi…` | classes covered by sufficient conditions of Lee and Zhang, and of Lee and Li |
+| `Order6Day7` … `Order6Day15`, `Order6Sunday` | batches of family proofs, named after the day of the finishing campaign |
+| `Order6Astra` | the proof for `[6, 3842]`, named after the agent that wrote it |
+| `CAS` | the campaign's search for transfers from lower orders, whose results were replayed in Lean |
+| `S4_31`, `S5_207`, … | the Smallsemi class `[4, 31]`, `[5, 207]`, … |
 
 ## How the proofs work
 

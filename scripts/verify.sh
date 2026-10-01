@@ -3,10 +3,13 @@
 #
 #   1. every Lean file of the development is the certified version, apart from
 #      the recorded changes (scripts/check_provenance.py);
-#   2. the catalogue data in Lean is the Smallsemi export catalogue.json
-#      (scripts/check_catalogue.py);
-#   3. Lake builds everything from source, so the Lean kernel checks every proof;
-#   4. the main theorems use no axiom beyond propext, Classical.choice and
+#   2. the catalogue data in Lean is the Smallsemi export catalogue.json, and
+#      its four exceptional classes are those of Lee and Zhang's published
+#      classification (scripts/check_catalogue.py);
+#   3. every Lean file is needed: it is imported by SemiBase.lean, the root of
+#      the classification theorem (scripts/check_closure.py);
+#   4. Lake builds everything from source, so the Lean kernel checks every proof;
+#   5. the main theorems use no axiom beyond propext, Classical.choice and
 #      Quot.sound (no sorry, no native_decide).
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -16,6 +19,9 @@ python3 scripts/check_provenance.py
 
 echo "== catalogue"
 python3 scripts/check_catalogue.py
+
+echo "== closure"
+python3 scripts/check_closure.py
 
 echo "== build"
 lake build
