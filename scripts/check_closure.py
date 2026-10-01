@@ -157,9 +157,11 @@ def main():
     for prefix, description in FOLDERS:
         if prefix not in folder_files:
             continue
-        needed_by = "all" if prefix.startswith("SemiBase") else str(needed[prefix])
+        statement = prefix.startswith("SemiBase")
+        needed_by = "all" if statement else str(needed[prefix])
+        nonfinite = "yes" if statement or nonfinite_uses[prefix] else "-"
         print(f"{prefix:44s} {len(folder_files[prefix]):6d} {lines[prefix]:9d} "
-              f"{needed_by:>9s} {hosts[prefix]:9d}  {'yes' if nonfinite_uses[prefix] else '-'}"
+              f"{needed_by:>9s} {hosts[prefix]:9d}  {nonfinite}"
               f"   {description}")
 
 
