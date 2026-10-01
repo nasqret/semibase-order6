@@ -61,4 +61,5 @@ it with the catalogue in an `example`. Here each class has a named theorem
 The certified commit was also rebuilt from a fresh clone and checked by the
 `bases-min` seal tools of Mikoláš Janota, which read every endpoint back from
 Lean: 15,969 finitely based classes with 536 distinct bases and 4 nonfinitely
-based classes, no failures, and only the three standard axioms.
+based classes, no failures, and no axioms beyond `propext`, `Classical.choice`
+and `Quot.sound`.
