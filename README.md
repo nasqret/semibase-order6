@@ -370,9 +370,10 @@ built.
 
 ## Citing
 
-The campaign is described in *Proving at Scale for Universal Algebra*, The 6th
-Workshop on Mathematical Reasoning and AI (MATH-AI), NeurIPS 2026. A citable
-archive of this repository will receive a DOI.
+This repository is archived on Zenodo, version 1.0.0:
+[doi:10.5281/zenodo.23109226](https://doi.org/10.5281/zenodo.23109226). The
+campaign is described in *Proving at Scale for Universal Algebra*, The 6th
+Workshop on Mathematical Reasoning and AI (MATH-AI), NeurIPS 2026.
 
 The repository is created and curated by
 [@nasqret](https://github.com/nasqret).
