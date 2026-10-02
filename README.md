@@ -155,17 +155,25 @@ cd semibase-order6
    `propext`, `Classical.choice` and `Quot.sound` (so no `sorry` and no
    `native_decide`).
 
-A full build is a substantial computation: 7,179 files and 5.7 million lines
+A full build is a substantial computation: 7,397 files and 5.9 million lines
 of Lean, compiled from source. Lake compiles as many files at a time as
-`LEAN_NUM_THREADS` allows (by default, the number of cores), and some generated
-files need tens of gigabytes each; compiling several of the 315 files of the
-proof for class `[6, 12824]` (333,557 lines) at the same time needs more than
-200 GB. On a machine with less memory, lower the parallelism, for example
+`LEAN_NUM_THREADS` allows (by default, the number of cores). Most files are
+small, but a few generated files need tens of gigabytes each, the largest about
+50 GB on its own. A build therefore needs a machine with more memory than that,
+and the default parallelism can exhaust the memory even of a large machine;
+lower it, for example
 
 ```sh
 LEAN_NUM_THREADS=4 ./scripts/verify.sh
 ```
 
+A reference build from scratch, on one node with 24 cores and 220 GB of
+memory, took 20 h 40 min in four stages: the endpoint theorems with 12 parallel
+jobs (8 h 30 min); the proof of `[6, 12824]`, 315 files with 333,557 lines, with
+3 parallel jobs (11 h 52 min, at most 8 GB per file); the remaining files
+(16 min); and the checks of `scripts/verify.sh` (2 min). In the first stage the
+12 jobs together reached the limit of 220 GB once, and the file that was
+stopped, a part of the certificate for `[6, 2582]`, compiled in the third stage.
 The independent re-certification rebuilt the same files from a fresh clone in
 about two hours with 96 parallel jobs.
 
