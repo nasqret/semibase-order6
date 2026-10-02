@@ -1,5 +1,7 @@
 # SemiBase: finite identity bases of the semigroups of order six
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23109225.svg)](https://doi.org/10.5281/zenodo.23109225)
+
 This repository contains Lean 4 proofs that every semigroup of order six is
 finitely based, that is, has a finite identity basis, with exactly four
 exceptions, which are proved to have no finite basis. The 15,973 semigroups of
@@ -370,7 +372,10 @@ built.
 
 ## Citing
 
-This repository is archived on Zenodo, version 1.0.0:
+The repository is archived on [Zenodo](https://zenodo.org/records/23109226).
+To cite it, use
+[doi:10.5281/zenodo.23109225](https://doi.org/10.5281/zenodo.23109225), which
+stands for all versions and resolves to the latest; version 1.0.0 alone is
 [doi:10.5281/zenodo.23109226](https://doi.org/10.5281/zenodo.23109226). The
 campaign is described in *Proving at Scale for Universal Algebra*, The 6th
 Workshop on Mathematical Reasoning and AI (MATH-AI), NeurIPS 2026.
