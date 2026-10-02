@@ -2,6 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23109225.svg)](https://doi.org/10.5281/zenodo.23109225)
 
+The census website, <https://nasqret.github.io/semibase-site/>, has a page for
+every semigroup of order six, with its table, its basis and a link to its Lean
+proof, and a graph of the 505 varieties they generate.
+
 This repository contains Lean 4 proofs that every semigroup of order six is
 finitely based, that is, has a finite identity basis, with exactly four
 exceptions, which are proved to have no finite basis. The 15,973 semigroups of
